@@ -101,7 +101,38 @@ body{
 }
 
 .section-title{
+  text-transform: uppercase;
   font-family: inherit;
   font-size: 5vw;
   line-height: 1;
+}
+
+.skill-item{
+  position: relative;
+}
+.skill-item::after, .skill-item::before{
+  content: '';
+  position: absolute;
+  background-color: var(--color-light);
+  height: 1px;
+  left: 0;
+  bottom: 0;
+}
+.skill-item::before{
+  width: 100%;
+  opacity: 0.3;
+}
+.skill-item::after{
+  width: 0;
+  background-color: #2dd4bf;
+  transition: all 0.5s;
+}
+.skill-item:hover::after{
+  width: 100%;
+}
+.skill-num{
+  font-size: 3vw;
+}
+.skill-name{
+  font-size: 1.5vw;
 }

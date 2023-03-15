@@ -1,3 +1,4 @@
+import SectionTitle from './SectionTitle';
 import SinglePro  from './SinglePro'
 
 const data = [
@@ -25,11 +26,9 @@ const data = [
 ]
 const Project = () => {
   return (
-    <div className="project container mx-auto mt-30" id="projects">
-      <div className="overflow-hidden">
-        <h2 className="section-title">Projects</h2>
-      </div>
-      <div className="wrapper-projects mt-30 flex flex-col gap-20">
+    <div className="project container mx-auto mt-32" id="projects">
+      <SectionTitle title={'Project'}/>
+      <div className="wrapper-projects mt-32 flex flex-col gap-20">
         {
           data.map((project)=>(
             <SinglePro key={project.id} project={project}/>
