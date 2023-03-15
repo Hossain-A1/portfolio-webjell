@@ -27,6 +27,9 @@ body{
   letter-spacing:1px;
   word-spacing: 2px;
 }
+.app{
+  position: relative;
+}
 .sound{
   background-image:url('./assets/images/noise.gif') ;
   height: 100vh;
@@ -36,7 +39,7 @@ body{
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: -999;
+  z-index: -9999;
   opacity: 0.05;
 }
 .link-item{
@@ -59,11 +62,12 @@ body{
 .hero{
   position: relative;
 }
-.hero-img{
-  height: 600px;
-  width: 600px;
+.hero-img,
+.pro-r{
+  height: 400px;
+  width: 400px;
+  align-items: center;
   overflow: hidden;
-  text-align: center;
 }
 
 .shutter{
@@ -88,9 +92,16 @@ body{
   border: 1px dashed var(--color-light);
   border-radius: 50%;
   opacity: 0.3;
-  z-index: -1000;
+  position: fixed;
+  z-index: -9998;
 }
 .circle-left{
   top: -40%;
   left: -40%;
+}
+
+.section-title{
+  font-family: inherit;
+  font-size: 5vw;
+  line-height: 1;
 }

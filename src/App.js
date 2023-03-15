@@ -5,8 +5,8 @@ import Footer from "./components/Footer";
 const App = () => {
   return (
     <div className="app">
-      <Navber/>
       <div className="sound"></div>
+      <Navber/>
       <Routes>
         <Route path="/" element={<Home/>} />
       </Routes>

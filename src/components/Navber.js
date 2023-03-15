@@ -4,7 +4,7 @@ const Navber = () => {
     <nav className="flex justify-between container  mx-auto uppercase mt-10">
       <div>
         <HashLink smooth to="#home" className="link-item">
-          Hossain Ahmed
+          Mohamad Hossain
         </HashLink>
       </div>
       <ul className="flex flex-col gap-3">

@@ -17,7 +17,7 @@ const Hero = () => {
         <h1 className="">ReactJS</h1>
       </div>
       <div className=" shutter shutter-right overflow-hidden">
-        <h1 className="">Dedeloper</h1>
+        <h1 className="">Developer</h1>
       </div>
       <div className="circel-left"></div>
       <div className="circel-right"></div>
