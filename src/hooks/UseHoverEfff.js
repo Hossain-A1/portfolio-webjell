@@ -11,7 +11,7 @@ export const UseHoverEfff = (el, img1,img2) => {
         image1: img1,
         image2: img2,
         displacementImage: cloud,
-        intensity: 0.3,
+        intensity: 0.1,
       })
     },[el,img1,img2])
   )

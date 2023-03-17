@@ -24,8 +24,12 @@ body{
   font-family: 'Michroma', sans-serif;
   font-size: 1.5rem;
   line-height: 1.5;
-  letter-spacing:1px;
+  letter-spacing:2px;
   word-spacing: 2px;
+}
+input[type='submit']{
+  letter-spacing: inherit;
+  word-spacing: inherit;
 }
 .app{
   position: relative;
@@ -63,7 +67,7 @@ body{
   position: relative;
 }
 .hero-img,
-.pro-r{
+.pro-r, .about-L{
   height: 400px;
   width: 400px;
   align-items: center;
