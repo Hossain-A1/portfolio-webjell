@@ -1,4 +1,6 @@
+import { useRef } from "react";
 import SectionTitle from "./SectionTitle";
+import { useSkillLineAnimation, useSkillTextAnimation } from "../hooks/Gsap";
 
 const data = [
   { id: 1, title: "HTML" },
@@ -15,6 +17,16 @@ const data = [
   { id: 12, title: "Firebase" },
 ];
 const Skills = () => {
+  const skilltemRef = useRef([]);
+  const skillItemRef2 = useRef([]);
+  const skillTextRef = useRef([]);
+  const skillTextRef2 = useRef([]);
+
+  useSkillLineAnimation(skilltemRef.current);
+  useSkillLineAnimation(skillItemRef2.current);
+  useSkillTextAnimation(skillTextRef.current);
+  useSkillTextAnimation(skillTextRef2.current);
+
   return (
     <div className="skills container mx-auto mt-32 " id="skills">
       <SectionTitle title={"skills"} />
@@ -23,21 +35,39 @@ const Skills = () => {
           {data
             .filter((_, i) => i < Math.floor(data.length / 2))
             .map((skill, i) => (
-              <li className="skill-item overflow-hidden" key={skill.id}>
-                <div className="flex gap-10 items-baseline">
-                  <span className="skill-num text-gray-50/50">{String(skill.id).padStart(2,0).padEnd(3,'.')}</span>
+              <li
+                key={skill.id}
+                className="skill-item overflow-hidden"
+                ref={(el) => (skilltemRef.current[i] = el)}
+              >
+                <div
+                  className="flex gap-10 items-baseline"
+                  ref={(el) => (skillTextRef.current[i] = el)}
+                >
+                  <span className="skill-num text-gray-50/50">
+                    {String(skill.id).padStart(2, 0).padEnd(3, ".")}
+                  </span>
                   <span className="skill-name">{skill.title}</span>
                 </div>
               </li>
             ))}
         </ul>
         <ul className="skill-R flex flex-col gap-10">
-        {data
+          {data
             .filter((_, i) => i >= Math.floor(data.length / 2))
             .map((skill, i) => (
-              <li className="skill-item overflow-hidden" key={skill.id}>
-                <div className="flex gap-10 items-baseline">
-                  <span className="skill-num text-gray-50/50">{String(skill.id).padStart(2,0).padEnd(3,'.')}</span>
+              <li
+                key={skill.id}
+                className="skill-item reveal overflow-hidden"
+                ref={(el) => (skillItemRef2.current[i] = el)}
+              >
+                <div
+                  className="flex gap-10 items-baseline"
+                  ref={(el) => (skillTextRef2.current[i] = el)}
+                >
+                  <span className="skill-num text-gray-50/50">
+                    {String(skill.id).padStart(2, 0).padEnd(3, ".")}
+                  </span>
                   <span className="skill-name">{skill.title}</span>
                 </div>
               </li>

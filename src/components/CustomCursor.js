@@ -1,7 +1,10 @@
 
-const CustomCursor = () => {
+const CustomCursor = ({innerRef, outerRef}) => {
   return (
-    <div>CustomCursor</div>
+    <>
+      <div className="inner-cursor" ref={innerRef}></div>
+      <div className="outer-cursor" ref={outerRef}></div>
+    </>
   )
 }
 
